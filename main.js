@@ -16,19 +16,20 @@
         if( arguments[0] && typeof arguments[0] === "object"  ) {
             this.popupOptions = validateOptions( arguments[0], popupDefaultOptions);
             console.log(this.popupOptions);
-        }
+        }        
+    }
 
-        //Private methods
-        //Helper method to check the passed arguments against the default options
-        function validateOptions(args, defOpts){
-            for (var arg in args){
-                if( args.hasOwnProperty(arg) ){
-                    console.log('Sucess');
-                    defOpts[arg] = args[arg];
-                }
+    //Private methods
+    
+    //Helper method to check the passed arguments against the default options
+    function validateOptions(args, defOpts){
+        for (var arg in args){
+            if( args.hasOwnProperty(arg) ){
+                console.log('Sucess');
+                defOpts[arg] = args[arg];
             }
-            return defOpts;
         }
+        return defOpts;
     }
     
     //public methods
